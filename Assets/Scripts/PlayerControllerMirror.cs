@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControllerMirror : MonoBehaviour
 {
     private Rigidbody2D body;
+    private Transform transform_;
 
     [SerializeField] private float speed = 10.0f;
 
@@ -13,6 +14,7 @@ public class PlayerControllerMirror : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        transform_ = GetComponent<Transform>();
     }
 
     private void FixedUpdate()
@@ -51,5 +53,21 @@ public class PlayerControllerMirror : MonoBehaviour
     private void FlipUpsideDown()
     {
         transform.Rotate(180.0f, 0f, 0f);
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Platform"))
+        {
+            transform_.parent = other.gameObject.transform;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Platform"))
+        {
+            transform_.parent = null;
+        }
     }
 }
