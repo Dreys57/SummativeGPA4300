@@ -21,4 +21,9 @@ public class DialogTrigger : MonoBehaviour
             TriggerDialog();
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Destroy(this);
+    }
 }

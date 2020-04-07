@@ -11,7 +11,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 10.0f;
 
     private float movementInputDirection;
-   
+
+    private bool isInDialog = false;
+
+    public bool IsInDialog
+    {
+        get => isInDialog;
+        set => isInDialog = value;
+    }
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -20,13 +28,29 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        ApplyMovement();
+        if (isInDialog)
+        {
+            body.velocity= Vector2.zero;
+
+            return;
+        }
+        else
+        {
+            ApplyMovement(); 
+        }
     }
 
 
     void Update()
     {
-        CheckInput();
+        if (isInDialog)
+        {
+            return;
+        }
+        else
+        {
+            CheckInput();  
+        }
     }
 
     private void CheckInput()

@@ -7,9 +7,12 @@ public class DialogManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI dialogText;
 
-    private Queue<string> sentences;
-
     [SerializeField] private GameObject dialogPanel;
+    
+    [SerializeField] private PlayerController player;
+    
+    private Queue<string> sentences;
+    
 
     void Start()
     {
@@ -21,6 +24,8 @@ public class DialogManager : MonoBehaviour
     public void StartDialog(Dialog dialog)
     {
         dialogPanel.SetActive(true);
+
+        player.IsInDialog = true;
 
         foreach (string sentence in dialog.Sentences)
         {
@@ -35,6 +40,10 @@ public class DialogManager : MonoBehaviour
         if (sentences.Count == 0)
         {
             sentences.Clear();
+
+            player.IsInDialog = false;
+            
+            dialogPanel.SetActive(false);
 
             return;
         }
