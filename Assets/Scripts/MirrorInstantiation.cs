@@ -20,7 +20,10 @@ public class MirrorInstantiation : MonoBehaviour
     {
         if (other.CompareTag("Player") && hasSpawnedMirror == false)
         {
+            mirrorSpawn.position = new Vector3(Player.transform.position.x, mirrorSpawn.position.y);
+            
             mirrorPlayer = Instantiate(mirrorPlayerPrefab, mirrorSpawn);
+            
             mirrorPlayer.GetComponent<Rigidbody2D>().gravityScale = -Player.GetComponent<Rigidbody2D>().gravityScale;
             
             if (mirrorPlayer.GetComponent<Rigidbody2D>().gravityScale > 0.1f)
@@ -29,6 +32,16 @@ public class MirrorInstantiation : MonoBehaviour
             }
             
             hasSpawnedMirror = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && hasSpawnedMirror == true)
+        {
+            Destroy(mirrorPlayer);
+
+            hasSpawnedMirror = false;
         }
     }
 }

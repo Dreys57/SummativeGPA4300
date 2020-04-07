@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
     private void FlipUpsideDown()
     {
         transform.Rotate(180.0f, 0f, 0f);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
