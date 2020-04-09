@@ -13,8 +13,11 @@
             <e p="DialogTrigger.cs" t="Include" />
           </e>
           <e p="GameManager.cs" t="Include" />
+          <e p="Inventory.cs" t="Include" />
+          <e p="MenuManager.cs" t="Include" />
           <e p="MirrorInstantiation.cs" t="Include" />
           <e p="MovingPlatform.cs" t="Include" />
+          <e p="PickUp.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerControllerMirror.cs" t="Include" />
         </e>
