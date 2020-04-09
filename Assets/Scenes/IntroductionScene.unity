@@ -1529,8 +1529,17 @@ MonoBehaviour:
     sentences:
     - 'Eric:
 
-      I finally got the artefact, now I''ve got to get out of this
-      place as soon as possible.'
+      What''s going on? I just felt a rumble come from the temple.'
+    - 'Eric:
+
+      I hope it''s nothing too bad.'
+    - 'Eric:
+
+      I don''t want to have to do a tomb raider out of this place.'
+    - 'Eric:
+
+      Well, at least I have the artefact. I just have to find a way
+      out now.'
   dialogManager: {fileID: 1819035365}
 --- !u!61 &1451457216
 BoxCollider2D:

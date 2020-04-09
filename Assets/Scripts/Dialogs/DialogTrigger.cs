@@ -9,6 +9,8 @@ public class DialogTrigger : MonoBehaviour
 
     [SerializeField] private DialogManager dialogManager;
 
+    private bool hasTriggeredDialog = false;
+
     public void TriggerDialog()
     {
         dialogManager.StartDialog(dialog);
@@ -16,14 +18,18 @@ public class DialogTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && hasTriggeredDialog == false)
         {
             TriggerDialog();
+            hasTriggeredDialog = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Destroy(this);
+        if (dialogManager.Sentences.Count == 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

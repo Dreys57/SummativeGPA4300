@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
@@ -12,7 +13,13 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private PlayerController player;
     
     private Queue<string> sentences;
-    
+
+    public Queue<string> Sentences
+    {
+        get => sentences;
+        set => sentences = value;
+    }
+
 
     void Start()
     {
