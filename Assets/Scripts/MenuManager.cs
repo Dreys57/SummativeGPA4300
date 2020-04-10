@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -44,11 +43,7 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void LoadScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-        Time.timeScale = 1;
-    }
+
 
     public void ActivatePanelCredits()
     {
@@ -84,13 +79,5 @@ public class MenuManager : MonoBehaviour
     {
         panelMenu.gameObject.SetActive(false);
         Time.timeScale = 1;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
-        {
-           
-        }
     }
 }
