@@ -27,6 +27,11 @@ public class MenuManager : MonoBehaviour
                 EnableInventory();
             }
         }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            ActivateMenuPause();
+        }
     }
 
     public void DisableInventory()
