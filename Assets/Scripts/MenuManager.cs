@@ -85,4 +85,12 @@ public class MenuManager : MonoBehaviour
         panelMenu.gameObject.SetActive(false);
         Time.timeScale = 1;
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+           
+        }
+    }
 }
