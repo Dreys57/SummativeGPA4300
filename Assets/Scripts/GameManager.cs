@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] string nameLoadScene;
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -20,7 +21,7 @@ public class GameManager : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            SceneManager.LoadScene("SceneSolange");
+            SceneManager.LoadScene(nameLoadScene);
             Time.timeScale = 1;
         }
     }

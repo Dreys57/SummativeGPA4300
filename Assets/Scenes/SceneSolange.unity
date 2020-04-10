@@ -814,6 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3271e47bf1c9a94ca2e01f2109e7972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameLoadScene: 
 --- !u!4 &259063143
 Transform:
   m_ObjectHideFlags: 0
@@ -15747,6 +15748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3271e47bf1c9a94ca2e01f2109e7972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameLoadScene: SceneSolange2
 --- !u!61 &2111932544
 BoxCollider2D:
   m_ObjectHideFlags: 0
