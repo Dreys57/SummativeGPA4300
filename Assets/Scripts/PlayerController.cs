@@ -22,6 +22,13 @@ public class PlayerController : MonoBehaviour
 
     private bool isInDialog = false;
     private bool hasTouchedTrap;
+
+    public bool HasTouchedTrap
+    {
+        get => hasTouchedTrap;
+        set => hasTouchedTrap = value;
+    }
+
     private bool hasTouchedCheckpoint;
 
     public bool IsInDialog

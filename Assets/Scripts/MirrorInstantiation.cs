@@ -12,9 +12,20 @@ public class MirrorInstantiation : MonoBehaviour
 
     [SerializeField] private GameObject Player;
 
+    [SerializeField] private PlayerController playerController;
+
     private GameObject mirrorPlayer;
     
     private bool hasSpawnedMirror = false;
+
+    private void Update()
+    {
+        if (playerController.HasTouchedTrap)
+        {
+            hasSpawnedMirror = false;
+            Destroy(mirrorPlayer);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
