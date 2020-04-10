@@ -128,7 +128,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 18c89b874a9e7f841ae6a4e5c2ca47e0, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -162,9 +162,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   trapCheckRadius: 0.67
+  checkpointCheckRadius: 0
   whatIsTrap:
     serializedVersion: 2
     m_Bits: 256
+  whatIsCheckpoint:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &1193551476
 BoxCollider2D:
   m_ObjectHideFlags: 0
