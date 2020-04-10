@@ -454,17 +454,17 @@ MonoBehaviour:
   m_XDamping: 1.09
   m_YDamping: 1
   m_ZDamping: 1
-  m_ScreenX: 0.36799997
-  m_ScreenY: 0.5
+  m_ScreenX: 0.518
+  m_ScreenY: 0.72099996
   m_CameraDistance: 10
   m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0.556
+  m_DeadZoneHeight: 0.317
   m_DeadZoneDepth: 0
-  m_UnlimitedSoftZone: 0
+  m_UnlimitedSoftZone: 1
   m_SoftZoneWidth: 0.8
   m_SoftZoneHeight: 0.8
   m_BiasX: 0
-  m_BiasY: 0
+  m_BiasY: -0.0000002191347
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0
@@ -1076,7 +1076,8 @@ GameObject:
   - component: {fileID: 441855091}
   - component: {fileID: 441855093}
   - component: {fileID: 441855092}
-  m_Layer: 0
+  - component: {fileID: 441855094}
+  m_Layer: 8
   m_Name: TilemapTraps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2815,6 +2816,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &441855094
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441855090}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!4 &451076819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2567117713959912346, guid: 1eb8247eaed473b428ed2694d607406b,
@@ -4639,7 +4656,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175453925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.933333, y: -3.2, z: -10}
+  m_LocalPosition: {x: -7.6000967, y: -0.9900007, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 106177359}
@@ -5645,7 +5662,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863928653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.933333, y: -3.2, z: -10}
+  m_LocalPosition: {x: -7.6000967, y: -0.9900007, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1808606664}
