@@ -460,33 +460,6 @@ Tilemap:
       m_TileColorIndex: 1
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
-  - first: {x: -8, y: -1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
-  - first: {x: -7, y: -1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
-  - first: {x: -6, y: -1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
   - first: {x: 9, y: -1, z: 0}
     second:
       serializedVersion: 2
@@ -1965,7 +1938,7 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 90
+  - m_RefCount: 87
     m_Data: {fileID: 11400000, guid: 25fb4890644579e4ea31b136451680dd, type: 2}
   - m_RefCount: 67
     m_Data: {fileID: 11400000, guid: d97bcb11de1cf8e43abef54cbc15686b, type: 2}
@@ -1974,7 +1947,7 @@ Tilemap:
   - m_RefCount: 17
     m_Data: {fileID: 11400000, guid: 6a1cdeaeb06e27e45bbd0f6128098512, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 90
+  - m_RefCount: 87
     m_Data: {fileID: 21300000, guid: 57794e327ac7c7248830be0f4dedb317, type: 3}
   - m_RefCount: 67
     m_Data: {fileID: 21300000, guid: 7ccaeae05a4a8564e8d0ad4570a1a631, type: 3}
@@ -1983,7 +1956,7 @@ Tilemap:
   - m_RefCount: 17
     m_Data: {fileID: 21300000, guid: f3e325b76cd1bee49b1de3bd63d4008c, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 180
+  - m_RefCount: 177
     m_Data:
       e00: 1
       e01: 0
@@ -2002,7 +1975,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 107
+  - m_RefCount: 104
     m_Data: {r: 0.69803923, g: 0.2901961, b: 0, a: 1}
   - m_RefCount: 67
     m_Data: {r: 0.6981132, g: 0.2882642, b: 0, a: 1}
