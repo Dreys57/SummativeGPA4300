@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SceneSolange.unity
     guid: 95eb376a471475049ba190f97a4cdf19
   - enabled: 1
+    path: Assets/Scenes/SkeletonScene.unity
+    guid: 8a1e93b4bc84489439d66e2dcc2f36c1
+  - enabled: 1
     path: Assets/Scenes/SceneSolange2.unity
     guid: 3c21014f551a0d74fba67185f58b25a4
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 075cae6981fa1f944a076516633a15e9
   m_configObjects: {}

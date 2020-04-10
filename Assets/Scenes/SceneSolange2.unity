@@ -8401,12 +8401,12 @@ PrefabInstance:
     - target: {fileID: 1404375694255655287, guid: 0c9527f3c0abbd94c947a82fbe2dcedd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.14
+      value: 8.21
       objectReference: {fileID: 0}
     - target: {fileID: 1404375694255655287, guid: 0c9527f3c0abbd94c947a82fbe2dcedd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2
+      value: -3.25
       objectReference: {fileID: 0}
     - target: {fileID: 1404375694255655287, guid: 0c9527f3c0abbd94c947a82fbe2dcedd,
         type: 3}
@@ -9154,7 +9154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270296145}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.14, y: -0.030000448, z: -10}
+  m_LocalPosition: {x: 8.21, y: -0.0800004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1498778389}
@@ -9304,7 +9304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405019852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.14, y: -0.030000448, z: -10}
+  m_LocalPosition: {x: 8.21, y: -0.0800004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9406,7 +9406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3271e47bf1c9a94ca2e01f2109e7972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameLoadScene: 
+  nameLoadScene: EndScene
 --- !u!4 &1491965529
 Transform:
   m_ObjectHideFlags: 0
@@ -9431,7 +9431,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.07559919, y: 0.086420536}
