@@ -9,10 +9,20 @@ public class PlayerController : MonoBehaviour
     private Transform transform_;
 
     [SerializeField] private float speed = 10.0f;
+    [SerializeField] private float trapCheckRadius;
+    [SerializeField] private float checkpointCheckRadius;
+
+    [SerializeField] private LayerMask whatIsTrap;
+    [SerializeField] private LayerMask whatIsCheckpoint;
 
     private float movementInputDirection;
+    private int baseGravity = 5;
+
+    private Vector3 restarsPos;
 
     private bool isInDialog = false;
+    private bool hasTouchedTrap;
+    private bool hasTouchedCheckpoint;
 
     public bool IsInDialog
     {
@@ -24,6 +34,8 @@ public class PlayerController : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         transform_ = GetComponent<Transform>();
+
+        restarsPos = transform.position;
     }
 
     private void FixedUpdate()
@@ -36,7 +48,9 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            ApplyMovement(); 
+            ApplyMovement();
+            
+            CheckSurroundings();
         }
     }
 
@@ -49,7 +63,9 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            CheckInput();  
+            CheckInput();
+            
+            ResetPlayer();
         }
     }
 
@@ -95,5 +111,34 @@ public class PlayerController : MonoBehaviour
         {
             transform_.parent = null;
         }
+    }
+
+    private void ResetPlayer()
+    {
+        if (hasTouchedCheckpoint)
+        {
+            restarsPos = transform.position;
+        }
+        
+        if (hasTouchedTrap)
+        {
+            transform.position = restarsPos;
+            body.velocity = Vector2.zero;
+            body.gravityScale = baseGravity;
+        }
+    }
+    
+    private void CheckSurroundings()
+    {
+        hasTouchedTrap = Physics2D.OverlapCircle(transform.position, trapCheckRadius, whatIsTrap);
+
+        hasTouchedCheckpoint = Physics2D.OverlapCircle(transform.position, checkpointCheckRadius, whatIsCheckpoint);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, trapCheckRadius);
+        
+        Gizmos.DrawWireSphere(transform.position, checkpointCheckRadius);
     }
 }
