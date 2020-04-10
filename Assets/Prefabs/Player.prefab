@@ -145,6 +145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5243524ebece44d8e3f07386024659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFull: 00
+  slots:
+  - {fileID: 0}
 --- !u!114 &1404375694255655275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  trapCheckRadius: 0.67
+  whatIsTrap:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!61 &1193551476
 BoxCollider2D:
   m_ObjectHideFlags: 0
