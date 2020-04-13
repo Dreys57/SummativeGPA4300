@@ -14,6 +14,10 @@ public class MirrorInstantiation : MonoBehaviour
 
     [SerializeField] private PlayerController playerController;
 
+    [SerializeField] private float trapCheckRadius;
+
+    [SerializeField] private LayerMask whatIsTrap;
+
     private GameObject mirrorPlayer;
     
     private bool hasSpawnedMirror = false;

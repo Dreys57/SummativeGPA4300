@@ -9,23 +9,40 @@ public class PlayerControllerMirror : MonoBehaviour
 
     [SerializeField] private float speed = 10.0f;
 
+    [SerializeField] private LayerMask whatIsTrap;
+
+    [SerializeField] private float trapCheckRadius;
+
+    private PlayerController playerController;
+
+    private bool mirrorHasTouchedTrap;
+
     private float movementInputDirection;
    
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         transform_ = GetComponent<Transform>();
+
+        playerController = FindObjectOfType<PlayerController>();
     }
 
     private void FixedUpdate()
     {
         ApplyMovement();
+        
+        CheckSurroundings();
     }
 
 
     void Update()
     {
         CheckInput();
+
+        if (mirrorHasTouchedTrap)
+        {
+            playerController.HasTouchedTrap = true;
+        }
     }
 
     private void CheckInput()
@@ -69,5 +86,15 @@ public class PlayerControllerMirror : MonoBehaviour
         {
             transform_.parent = null;
         }
+    }
+    
+    private void CheckSurroundings()
+    {
+        mirrorHasTouchedTrap = Physics2D.OverlapCircle(transform.position, trapCheckRadius, whatIsTrap);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, trapCheckRadius);
     }
 }

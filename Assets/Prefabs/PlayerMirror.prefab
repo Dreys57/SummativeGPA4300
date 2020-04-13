@@ -145,6 +145,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  whatIsTrap:
+    serializedVersion: 2
+    m_Bits: 256
+  trapCheckRadius: 0.68
+  playerController: {fileID: 1404375694255655275, guid: 0c9527f3c0abbd94c947a82fbe2dcedd,
+    type: 3}
 --- !u!61 &368971276
 BoxCollider2D:
   m_ObjectHideFlags: 0

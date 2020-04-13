@@ -17,19 +17,24 @@ public class PlayerController : MonoBehaviour
 
     private float movementInputDirection;
     private int baseGravity = 5;
-
-    private Vector3 restarsPos;
-
+    
+    private Vector3 restartPos;
+    
     private bool isInDialog = false;
     private bool hasTouchedTrap;
+    private bool hasTouchedCheckpoint;
+    
+    public Vector3 RestartPos
+    {
+        get => restartPos;
+        set => restartPos = value;
+    }
 
     public bool HasTouchedTrap
     {
         get => hasTouchedTrap;
         set => hasTouchedTrap = value;
     }
-
-    private bool hasTouchedCheckpoint;
 
     public bool IsInDialog
     {
@@ -42,7 +47,7 @@ public class PlayerController : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         transform_ = GetComponent<Transform>();
 
-        restarsPos = transform.position;
+        restartPos = transform.position;
     }
 
     private void FixedUpdate()
@@ -124,12 +129,12 @@ public class PlayerController : MonoBehaviour
     {
         if (hasTouchedCheckpoint)
         {
-            restarsPos = transform.position;
+            restartPos = transform.position;
         }
         
         if (hasTouchedTrap)
         {
-            transform.position = restarsPos;
+            transform.position = restartPos;
             body.velocity = Vector2.zero;
             body.gravityScale = baseGravity;
         }
