@@ -11,6 +11,7 @@
             <e p="Dialog.cs" t="Include" />
             <e p="DialogManager.cs" t="Include" />
             <e p="DialogTrigger.cs" t="Include" />
+            <e p="FinalDialogTrigger.cs" t="Include" />
           </e>
           <e p="GameManager.cs" t="Include" />
           <e p="Inventory.cs" t="Include" />
