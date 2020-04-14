@@ -597,6 +597,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: Message(3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[0]
+      value: It's been so long now that I crave interaction, contact with someone
+        else but I am alone, left to rot.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[1]
+      value: I started talking to the walls and thorns. I even tried to hug one,
+        but it hurts. Everything hurt. I just want to sleep.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialogManager
+      value: 
+      objectReference: {fileID: 338251193}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cac4220f226e3249a6ab8d1e63356a8, type: 3}
 --- !u!4 &153802620 stripped
@@ -3146,7 +3168,7 @@ PrefabInstance:
     - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
         type: 3}
       propertyPath: dialog.sentences.Array.data[0]
-      value: plop
+      value: This artefact is different. It changes your perspective.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cac4220f226e3249a6ab8d1e63356a8, type: 3}
@@ -4486,7 +4508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175453925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5200005, y: -0.8700006, z: -10}
+  m_LocalPosition: {x: -7.5997586, y: -0.8700006, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 106177359}
@@ -4559,6 +4581,28 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Message(4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialogManager
+      value: 
+      objectReference: {fileID: 338251193}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[0]
+      value: What do they want? Why are they doing this? Are they even sentient?
+        Or like an AI, without a personal purpose.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[1]
+      value: Without better things to do, I ponder on my existence and theirs. Why
+        do they seem so interested in us?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cac4220f226e3249a6ab8d1e63356a8, type: 3}
@@ -5207,6 +5251,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: Message(2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[0]
+      value: I'm losing myself. I can't seem to find an exit. Will I die here?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[1]
+      value: I'm so thirsty. I see water in the distance but I can't seem to find
+        a way there.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[2]
+      value: I am slowly losing hope. But I can't give up.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialogManager
+      value: 
+      objectReference: {fileID: 338251193}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cac4220f226e3249a6ab8d1e63356a8, type: 3}
 --- !u!1 &1523337511
@@ -6239,7 +6314,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863928653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5200005, y: -0.8700006, z: -10}
+  m_LocalPosition: {x: -7.5997586, y: -0.8700006, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1808606664}
