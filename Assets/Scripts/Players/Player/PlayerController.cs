@@ -94,6 +94,16 @@ public class PlayerController : MonoBehaviour
     private void ApplyMovement()
     {
         body.velocity = new Vector2(speed * movementInputDirection, body.velocity.y);
+
+        if (body.velocity.y > 10.0f)
+        {
+            body.velocity = new Vector2(body.velocity.x, 8.0f);
+        }
+        
+        if (body.velocity.y < -10.0f)
+        {
+            body.velocity = new Vector2(body.velocity.x, -8.0f);
+        }
     }
 
     private void ChangeGravity()
