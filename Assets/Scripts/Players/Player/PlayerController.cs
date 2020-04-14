@@ -16,10 +16,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask whatIsCheckpoint;
 
     private float movementInputDirection;
+    private float velocityLimitUp = 10.0f;
+    private float maxVelocityUp = 8.0f;
+    private float velocityLimitDown = -10.0f;
+    private float maxVelocityDown = -8.0f;
+    
     private int baseGravity = 5;
     
     private Vector3 restartPos;
-    
+
     private bool isInDialog = false;
     private bool hasTouchedTrap;
     private bool hasTouchedCheckpoint;
@@ -95,14 +100,14 @@ public class PlayerController : MonoBehaviour
     {
         body.velocity = new Vector2(speed * movementInputDirection, body.velocity.y);
 
-        if (body.velocity.y > 10.0f)
+        if (body.velocity.y > velocityLimitUp)
         {
-            body.velocity = new Vector2(body.velocity.x, 8.0f);
+            body.velocity = new Vector2(body.velocity.x, maxVelocityUp);
         }
         
-        if (body.velocity.y < -10.0f)
+        if (body.velocity.y < velocityLimitDown)
         {
-            body.velocity = new Vector2(body.velocity.x, -8.0f);
+            body.velocity = new Vector2(body.velocity.x, maxVelocityDown);
         }
     }
 
