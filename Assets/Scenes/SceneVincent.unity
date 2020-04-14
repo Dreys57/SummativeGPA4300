@@ -610,7 +610,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9d01ca4ff1384438c34629e988e020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryPanel: {fileID: 1587140659}
   panelMenu: {fileID: 0}
   panelCredits: {fileID: 0}
   panelMenuPause: {fileID: 0}

@@ -9,16 +9,12 @@ public class PlayerController : MonoBehaviour
     private Transform transform_;
     private Animator animator;
 
-    [SerializeField] private Transform groundCheck;
-
     [SerializeField] private float speed = 10.0f;
     [SerializeField] private float trapCheckRadius;
     [SerializeField] private float checkpointCheckRadius;
-    [SerializeField] private float groundCheckRadius;
 
     [SerializeField] private LayerMask whatIsTrap;
     [SerializeField] private LayerMask whatIsCheckpoint;
-    [SerializeField] private LayerMask whatIsGround;
 
     private float movementInputDirection;
     private float velocityLimitUp = 10.0f;
@@ -34,7 +30,6 @@ public class PlayerController : MonoBehaviour
     private bool isInDialog = false;
     private bool hasTouchedTrap;
     private bool hasTouchedCheckpoint;
-    private bool isGrounded;
     private bool isWalking;
     private bool isFacingRight= true;
     
@@ -88,8 +83,6 @@ public class PlayerController : MonoBehaviour
         {
             isWalking = false;
 
-            isGrounded = true;
-            
             UpdateAnimations();
             return;
         }
@@ -204,7 +197,6 @@ public class PlayerController : MonoBehaviour
     private void UpdateAnimations()
     {
         animator.SetBool("isWalking",isWalking);
-        animator.SetBool("isGrounded", isGrounded);
     }
     
     private void CheckSurroundings()
@@ -212,8 +204,6 @@ public class PlayerController : MonoBehaviour
         hasTouchedTrap = Physics2D.OverlapCircle(transform.position, trapCheckRadius, whatIsTrap);
 
         hasTouchedCheckpoint = Physics2D.OverlapCircle(transform.position, checkpointCheckRadius, whatIsCheckpoint);
-
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
     }
 
     private void OnDrawGizmos()
@@ -221,7 +211,5 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, trapCheckRadius);
         
         Gizmos.DrawWireSphere(transform.position, checkpointCheckRadius);
-        
-        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 }

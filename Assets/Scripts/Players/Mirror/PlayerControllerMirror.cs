@@ -6,6 +6,7 @@ public class PlayerControllerMirror : MonoBehaviour
 {
     private Rigidbody2D body;
     private Transform transform_;
+    private Animator animator;
 
     [SerializeField] private float speed = 10.0f;
 
@@ -16,6 +17,8 @@ public class PlayerControllerMirror : MonoBehaviour
     private PlayerController playerController;
 
     private bool mirrorHasTouchedTrap;
+    private bool isWalking;
+    private bool isFacingRight = true;
 
     private float movementInputDirection;
    
@@ -23,6 +26,7 @@ public class PlayerControllerMirror : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         transform_ = GetComponent<Transform>();
+        animator = GetComponent<Animator>();
 
         playerController = FindObjectOfType<PlayerController>();
     }
@@ -38,6 +42,10 @@ public class PlayerControllerMirror : MonoBehaviour
     void Update()
     {
         CheckInput();
+        
+        CheckMovementDirection();
+        
+        UpdateAnimations();
 
         if (mirrorHasTouchedTrap)
         {
@@ -59,6 +67,33 @@ public class PlayerControllerMirror : MonoBehaviour
     {
         body.velocity = new Vector2(speed * movementInputDirection, body.velocity.y);
     }
+    
+    private void CheckMovementDirection()
+    {
+        if (isFacingRight && movementInputDirection < 0)
+        {
+            Flip();
+        }
+        else if (!isFacingRight && movementInputDirection > 0)
+        {
+            Flip();
+        }
+
+        if (Mathf.Abs(body.velocity.x) >= 0.1f)
+        {
+            isWalking = true;
+        }
+        else
+        {
+            isWalking = false;
+        }
+    }
+
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0.0f, 180.0f, 0.0f);
+    }
 
     private void ChangeGravity()
     {
@@ -70,6 +105,11 @@ public class PlayerControllerMirror : MonoBehaviour
     private void FlipUpsideDown()
     {
         transform.Rotate(180.0f, 0f, 0f);
+    }
+    
+    private void UpdateAnimations()
+    {
+        animator.SetBool("isWalking",isWalking);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
