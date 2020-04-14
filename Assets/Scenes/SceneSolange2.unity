@@ -28292,12 +28292,12 @@ PrefabInstance:
     - target: {fileID: 612274669220384704, guid: 3cac4220f226e3249a6ab8d1e63356a8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.1
+      value: -25.84
       objectReference: {fileID: 0}
     - target: {fileID: 612274669220384704, guid: 3cac4220f226e3249a6ab8d1e63356a8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.79
+      value: -8.3
       objectReference: {fileID: 0}
     - target: {fileID: 612274669220384704, guid: 3cac4220f226e3249a6ab8d1e63356a8,
         type: 3}
@@ -28351,9 +28351,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
         type: 3}
+      propertyPath: dialog.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 505605771}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[0]
+      value: Am I seeing things or is something copying me? This place is making
+        me crazy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[1]
+      value: I am going to die soon probably, but I have to continue.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cac4220f226e3249a6ab8d1e63356a8, type: 3}
 --- !u!4 &1084662613 stripped
@@ -29628,12 +29644,12 @@ PrefabInstance:
     - target: {fileID: 612274669220384704, guid: 3cac4220f226e3249a6ab8d1e63356a8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.33
+      value: 11.54
       objectReference: {fileID: 0}
     - target: {fileID: 612274669220384704, guid: 3cac4220f226e3249a6ab8d1e63356a8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.35
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: 612274669220384704, guid: 3cac4220f226e3249a6ab8d1e63356a8,
         type: 3}
@@ -29687,9 +29703,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
         type: 3}
+      propertyPath: dialog.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 505605771}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[0]
+      value: This thing looks exactly like me. This is disturbing. But I was so desperate
+        for someone to talk to that I tried to reach it, but it just disappeared
+        into thin air.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[1]
+      value: I am going to die. And I am welcoming it with open arms.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cac4220f226e3249a6ab8d1e63356a8, type: 3}
 --- !u!4 &1668740378 stripped
@@ -30055,9 +30088,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
         type: 3}
+      propertyPath: dialog.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 505605771}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[0]
+      value: At last I see the light. Is it the light of day, or the light of my
+        imminent death? Doesn't matter anyway. These guys running the show don't
+        care about us.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[1]
+      value: I talked with myself, or at least what looks like myself. It didn't
+        seem to be alive. But who am I to say that?
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cac4220f226e3249a6ab8d1e63356a8, type: 3}
 --- !u!4 &1790774381 stripped
