@@ -7,19 +7,25 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D body;
     private Transform transform_;
+    private Animator animator;
+
+    [SerializeField] private Transform groundCheck;
 
     [SerializeField] private float speed = 10.0f;
     [SerializeField] private float trapCheckRadius;
     [SerializeField] private float checkpointCheckRadius;
+    [SerializeField] private float groundCheckRadius;
 
     [SerializeField] private LayerMask whatIsTrap;
     [SerializeField] private LayerMask whatIsCheckpoint;
+    [SerializeField] private LayerMask whatIsGround;
 
     private float movementInputDirection;
     private float velocityLimitUp = 10.0f;
     private float maxVelocityUp = 8.0f;
     private float velocityLimitDown = -10.0f;
     private float maxVelocityDown = -8.0f;
+    
     
     private int baseGravity = 5;
     
@@ -28,6 +34,9 @@ public class PlayerController : MonoBehaviour
     private bool isInDialog = false;
     private bool hasTouchedTrap;
     private bool hasTouchedCheckpoint;
+    private bool isGrounded;
+    private bool isWalking;
+    private bool isFacingRight= true;
     
     public Vector3 RestartPos
     {
@@ -51,6 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         transform_ = GetComponent<Transform>();
+        animator = GetComponent<Animator>();
 
         restartPos = transform.position;
     }
@@ -76,11 +86,20 @@ public class PlayerController : MonoBehaviour
     {
         if (isInDialog)
         {
+            isWalking = false;
+
+            isGrounded = true;
+            
+            UpdateAnimations();
             return;
         }
         else
         {
             CheckInput();
+            
+            CheckMovementDirection();
+            
+            UpdateAnimations();
             
             ResetPlayer();
         }
@@ -109,6 +128,33 @@ public class PlayerController : MonoBehaviour
         {
             body.velocity = new Vector2(body.velocity.x, maxVelocityDown);
         }
+    }
+
+    private void CheckMovementDirection()
+    {
+        if (isFacingRight && movementInputDirection < 0)
+        {
+            Flip();
+        }
+        else if (!isFacingRight && movementInputDirection > 0)
+        {
+            Flip();
+        }
+
+        if (Mathf.Abs(body.velocity.x) >= 0.1f)
+        {
+            isWalking = true;
+        }
+        else
+        {
+            isWalking = false;
+        }
+    }
+
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 
     private void ChangeGravity()
@@ -154,12 +200,20 @@ public class PlayerController : MonoBehaviour
             body.gravityScale = baseGravity;
         }
     }
+
+    private void UpdateAnimations()
+    {
+        animator.SetBool("isWalking",isWalking);
+        animator.SetBool("isGrounded", isGrounded);
+    }
     
     private void CheckSurroundings()
     {
         hasTouchedTrap = Physics2D.OverlapCircle(transform.position, trapCheckRadius, whatIsTrap);
 
         hasTouchedCheckpoint = Physics2D.OverlapCircle(transform.position, checkpointCheckRadius, whatIsCheckpoint);
+
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
     }
 
     private void OnDrawGizmos()
@@ -167,5 +221,7 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, trapCheckRadius);
         
         Gizmos.DrawWireSphere(transform.position, checkpointCheckRadius);
+        
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 }
