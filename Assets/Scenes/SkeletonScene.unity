@@ -9353,9 +9353,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
         type: 3}
+      propertyPath: dialog.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1133183762}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[0]
+      value: I am not the first and I will certainly not be the last. It seems as
+        so people's last thoughts are put on paper throughout this place.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[1]
+      value: I saw something a few days ago, it was rummaging through a corpse. It
+        fled as soon as it noticed me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506144336794536503, guid: 3cac4220f226e3249a6ab8d1e63356a8,
+        type: 3}
+      propertyPath: dialog.sentences.Array.data[2]
+      value: They seem to search for something. Something in us. Anyway. It's my
+        turn to go. Hope that the person that will read my last words will have a
+        better chance than I did.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cac4220f226e3249a6ab8d1e63356a8, type: 3}
 --- !u!1001 &1848416309
