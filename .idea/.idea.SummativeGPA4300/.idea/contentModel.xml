@@ -13,14 +13,22 @@
             <e p="DialogTrigger.cs" t="Include" />
             <e p="FinalDialogTrigger.cs" t="Include" />
           </e>
-          <e p="GameManager.cs" t="Include" />
-          <e p="Inventory.cs" t="Include" />
-          <e p="MenuManager.cs" t="Include" />
-          <e p="MirrorInstantiation.cs" t="Include" />
-          <e p="MovingPlatform.cs" t="Include" />
-          <e p="PickUp.cs" t="Include" />
-          <e p="PlayerController.cs" t="Include" />
-          <e p="PlayerControllerMirror.cs" t="Include" />
+          <e p="Managers" t="Include">
+            <e p="GameManager.cs" t="Include" />
+            <e p="MenuManager.cs" t="Include" />
+          </e>
+          <e p="MovingPlatform" t="Include">
+            <e p="MovingPlatform.cs" t="Include" />
+          </e>
+          <e p="Players" t="Include">
+            <e p="Mirror" t="Include">
+              <e p="MirrorInstantiation.cs" t="Include" />
+              <e p="PlayerControllerMirror.cs" t="Include" />
+            </e>
+            <e p="Player" t="Include">
+              <e p="PlayerController.cs" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

@@ -4,51 +4,23 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private GameObject panelMenu;
     [SerializeField] private GameObject panelCredits;
     [SerializeField] private GameObject panelMenuPause;
 
     void Start()
     {
-        inventoryPanel.SetActive(false);
+        
     }
     
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            if (inventoryPanel.activeSelf)
-            {
-                DisableInventory();
-            }
-            else
-            {
-                EnableInventory();
-            }
-        }
-
-        if (Input.GetButtonDown("Fire2"))
+        
+        if (Input.GetButtonDown("Pause"))
         {
             ActivateMenuPause();
         }
     }
-
-    public void DisableInventory()
-    {
-        inventoryPanel.SetActive(false);
-
-        Time.timeScale = 1;
-    }
-    
-    public void EnableInventory()
-    {
-        inventoryPanel.SetActive(true);
-
-        Time.timeScale = 0;
-    }
-
-
 
     public void ActivatePanelCredits()
     {
