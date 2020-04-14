@@ -27691,6 +27691,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7650689734823843063, guid: 40f8241a7f76a9d42a02065dba5bd738,
         type: 3}
       propertyPath: m_Name
@@ -29297,6 +29312,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7650689734823843063, guid: 40f8241a7f76a9d42a02065dba5bd738,
         type: 3}
       propertyPath: m_Name
@@ -30479,6 +30509,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7650689734823843063, guid: 40f8241a7f76a9d42a02065dba5bd738,
         type: 3}
       propertyPath: m_Name
@@ -30587,6 +30632,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7650689734823843063, guid: 40f8241a7f76a9d42a02065dba5bd738,
         type: 3}
@@ -30864,6 +30924,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650689734823843057, guid: 40f8241a7f76a9d42a02065dba5bd738,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7650689734823843063, guid: 40f8241a7f76a9d42a02065dba5bd738,
         type: 3}

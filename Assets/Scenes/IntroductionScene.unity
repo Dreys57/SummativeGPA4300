@@ -9500,6 +9500,7 @@ MonoBehaviour:
 
       Well, at least I have the artefact. I just have to find a way
       out now.'
+    - (Use the arrow keys or the joystick to move)
   dialogManager: {fileID: 1819035365}
 --- !u!61 &1451457216
 BoxCollider2D:
