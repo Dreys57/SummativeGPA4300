@@ -7,21 +7,8 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] private Sound[] sounds;
 
-    public static AudioManager instance;
-
     void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-        
-        DontDestroyOnLoad(gameObject);
-        
         foreach (Sound s in sounds)
         {
             s.Source = gameObject.AddComponent<AudioSource>();

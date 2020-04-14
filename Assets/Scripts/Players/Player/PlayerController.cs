@@ -2,12 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D body;
     private Transform transform_;
     private Animator animator;
+
+    [SerializeField] private AudioManager audioManager;
 
     [SerializeField] private float speed = 10.0f;
     [SerializeField] private float trapCheckRadius;
@@ -95,6 +98,15 @@ public class PlayerController : MonoBehaviour
             UpdateAnimations();
             
             ResetPlayer();
+
+            if (isWalking)
+            {
+                audioManager.PlaySound("Walking");
+            }
+            else if (!isWalking)
+            {
+                audioManager.ForceStop("Walking");
+            }
         }
     }
 
